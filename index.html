@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div ng-controller="firstData">
+            <!-- <h1>my name is {{data[0].name}},
+                 age is{{data[0].age}},
+                 contact no {{data[0].contact}},
+                 email-{{data[0].email}}.
+            </h1>
+            {{data[9]}} -->
+            <table border="1">
+                <tr>
+                    <th>name</th>
+                    <th>age</th>
+                    <th>contact</th>
+                    <th>email</th>
+                </tr>
+                <tr ng-repeat="_data in data">
+                    <td>{{_data.name}}</td>
+                    <td>{{_data.age}}</td>
+                    <td>{{_data.contact}}</td>
+                    <td>{{_data.email}}</td>
+                </tr>
+            </table>
+            <first-directive></first-directive>
+            <div first-directive=""></div>
+            <div class="first-directive"></div>
+        </div>
+        <h1>
+            <input type="text" ng-bind="hello" />
+            {{hello}}
+        </h1>
+        <h1>
+            <input type="text" ng-model="hai" />
+            {{hai}}
+        </h1>
+
+        <div ng-app="" ng-init="switch=true">
+            <button ng-disabled="switch">clik me!</button>
+            <p> <input type="checkbox" ng-model="switch" />click</p>
+            {{switch}}
+        </div>
+        <div ng-app="" ng-init="">
+            <p ng-show="true">i am visible</p>
+            <p ng-show="fasle">i am not visible</p>
+        </div>
+        <div ng-app="">
+            <p ng-hide="false">i am not visible</p>
+            <p ng-hide="true">i am visible</p>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>
